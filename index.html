@@ -6,7 +6,8 @@
     <body>
         <h3>Today is a beautiful day!!</h3>
         <ul></ul>
-        <svg width='200' height='500'></svg>
+        <!-- <svg width='200' height='500'></svg> -->
+        <button id='btn'>Show Message</button>
 
         <script src='https://d3js.org/d3.v4.min.js'></script>
 
@@ -32,7 +33,7 @@
                 .attr('height', 100)
                 .attr('fill', 'green'); */
 
-            const data = [80, 120, 60, 150, 200];
+            /* const data = [80, 120, 60, 150, 200];
             const barHeight = 20;
             const bar = d3.select('svg')
                             .selectAll('rect')
@@ -41,7 +42,14 @@
                             .append('rect')
                             .attr('width', d => d)
                             .attr('height', barHeight - 1)
-                            .attr('transform', (d, i) => 'translate(0, '+ i * barHeight +')');
+                            .attr('transform', (d, i) => 'translate(0, '+ i * barHeight +')'); */
+            d3.select('#btn')
+                .on('click', () => {
+                    d3.select('body')
+                        .append('h3')
+                        .text('Button clicked!');
+                })
+                
         </script>
     </body>
 </html>
